@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ADIMO - Administração de Imóveis</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="images/favicon.png" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <header class="content-header">
+            <div class="menu-grid">
+                <nav class="content-menu">
+                    <a href="index.html"><img class="logo" src="images/logo.png" alt="logo placeholder"/></a>
+
+                    <ul class="menu-list">
+                        <li class="menu-item menu-item-gap"><a href="index.html">Página inicial</a></li>
+                        <li class="menu-item menu-item-gap"><a href="#">Imóveis</a></li>
+                        <li class="menu-item menu-item-gap"><a href="#">Sobre</a></li>
+                        <li class="menu-item menu-item-gap"><a href="#">Fale conosco</a></li>
+                    </ul>
+                </nav>
+                <div class="login">    
+                    <a href="#">
+                        <span>Login</span>
+                        <img class="menu-item" src="images/user.svg" alt="user"/>
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-mob">
+                <a href="#"><img class="logo" src="images/logo.png" alt="logo placeholder"/></a>
+
+                <ul class="menu-list" id="myLinks">
+                    <li class="menu-item-mob"><a href="index.html">Página inicial<br/></a></li>
+                    <li class="menu-item-mob"><a href="#">Imóveis<br/></a></li>
+                    <li class="menu-item-mob"><a href="#">Sobre<br/></a></li>
+                    <li class="menu-item-mob"><a href="#">Fale conosco</a></li>
+                </ul>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
+        </header>
+
+        <!-- content -->
+        <section class="content-body">
+
+            <div class="container">
+            <form action="/action_page.php">
+                <label for="fname">Nome</label>
+                <input type="text" id="fname" name="firstname" placeholder="Nome">
+
+                <label for="lname">Sobrenome</label>
+                <input type="text" id="lname" name="lastname" placeholder="Sobrenome">
+
+                <label for="lname">CPF</label>
+                <input type="number" id="cpf" name="cpf" placeholder="CPF"><br/>
+
+                <label for="lname">Email</label>
+                <input type="text" id="email" name="email" placeholder="E-mail">
+
+                <label for="lname">Informe o Imovel pelo qual você se interessou:</label>
+                <select id="imovel" name="imovel">
+                    <option value="imovel1">Apartamento Aconchegante, Consolação - SP</option>
+                    <option value="imovel2">Apartamento Moderno,  Itaim Bibi - SP</option>
+                    <option value="imovel3">Apartamento Mobiliado, República - SP</option>
+                    <option value="imovel4">Apartamento Centro, Campos Elíseos - SP</option>
+                    <option value="imovel5">Apartamento Moderno 2, Vila Nova Conceição - SP</option>
+                    <option value="imovel6">Apartamento com Suite, Campo Belo - SP</option>
+                </select>
+
+                <label for="subject">Mensagem</label>
+                <textarea id="subject" name="subject" placeholder="Escreva qualquer dúvida que deseja sanar com um de nossos consultores" style="height:200px"></textarea>
+            </form>
+
+            <input type="submit" value="Enviar" onClick="send()">
+            </div>
+        </section>
+
+        <div class="slide1">
+            <img class="slider" src="images/img1.jpg" alt="img">
+            <img class="slider" src="images/img2.jpg" alt="img">
+            <img class="slider" src="images/img3.jpg" alt="img">
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <hr class="footer-hr"/>
+            <div class="content-footer">
+                <div class="footer-sections footer-list">
+                    <a href="index.html"><img class="logo" src="images/logo.png" alt="logo placeholder"/></a>
+                
+                </div>
+                
+                <div class="footer-list">
+                    <ul>
+                        <li class="footer-title">Sobre</li>
+                        <li class="footer-sections"><a href="#">Lorem Ipsum</a></li>
+                        <li class="footer-sections"><a href="#">dolor sit amet</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-list">
+                    <ul>
+                        <li class="footer-title">Nossos Serviços</li>
+                        <li class="footer-sections"><a href="#">Lorem Ipsum</a></li>
+                        <li class="footer-sections"><a href="#">dolor sit amet</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-list">
+                    <ul>
+                        <li class="footer-title">Fale Conosco</li>
+                        <li class="footer-sections"><a href="#">Lorem Ipsum</a></li>
+                        <li class="footer-sections"><a href="#">dolor sit amet</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-bottom-hr" />
+
+            <p class="footer-info">2021©️ - ADIMO ESCAMINOSFLAU LTDA - CNPJ 00.000.000/0000-0 - Todos os direitos reservados</p>
+        </footer>
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myLinks");
+              if (x.style.display === "block") {
+                x.style.display = "none";
+              } else {
+                x.style.display = "block";
+              }
+            }
+
+            function send() {
+                alert("Dados recebidos!, entraremos em contato em breve!")
+            }
+
+        </script>  
+    </body>
+</html>
+
